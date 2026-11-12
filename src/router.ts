@@ -1,11 +1,23 @@
 import { Router } from "express";
-import { body } from "express-validator";
-import { createProduct, getProducts } from "./handlers/product.js";
+import { body, param } from "express-validator";
+import {
+  createProduct,
+  getProductById,
+  getProducts,
+  updateProduct,
+} from "./handlers/product.js";
 import { handleInputErrors } from "./middleware/index.js";
 
 const router = Router();
 // Routing
 router.get("/", getProducts);
+router.get(
+  "/:id",
+
+  param("id").isInt().withMessage("Invalid ID"),
+  handleInputErrors,
+  getProductById,
+);
 
 router.post(
   "/",
@@ -25,9 +37,27 @@ router.post(
   createProduct,
 );
 
-router.put("/", (req, res) => {
-  res.json("Desde PUT");
-});
+router.put(
+  "/:id",
+  // Validacion
+  body("name").notEmpty().withMessage("The product name cannot be left blank"),
+
+  body("price")
+    .isNumeric()
+    .withMessage("Invalid value")
+    .notEmpty()
+    .withMessage("The product price cannot be left blank")
+    .custom((value) => value > 0)
+    .withMessage("Invalid price"),
+
+  body("availability")
+    .isBoolean()
+    .withMessage("Invalid value for availability"),
+
+  handleInputErrors,
+
+  updateProduct,
+);
 
 router.patch("/", (req, res) => {
   res.json("Desde PATCH");
