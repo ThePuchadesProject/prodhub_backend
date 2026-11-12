@@ -1,4 +1,7 @@
 import { Router } from "express";
+import { body } from "express-validator";
+import { createProduct } from "./handlers/product.js";
+import { handleInputErrors } from "./middleware/index.js";
 
 const router = Router();
 // Routing
@@ -6,9 +9,23 @@ router.get("/", (req, res) => {
   res.json("Desde GET");
 });
 
-router.post("/", (req, res) => {
-  res.json("Desde POST");
-});
+router.post(
+  "/",
+  // Validacion
+  body("name").notEmpty().withMessage("The product name cannot be left blank"),
+
+  body("price")
+    .isNumeric()
+    .withMessage("Invalid value")
+    .notEmpty()
+    .withMessage("The product price cannot be left blank")
+    .custom((value) => value > 0)
+    .withMessage("Invalid price"),
+
+  handleInputErrors,
+
+  createProduct,
+);
 
 router.put("/", (req, res) => {
   res.json("Desde PUT");

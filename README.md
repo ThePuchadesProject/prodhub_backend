@@ -19,6 +19,7 @@ This repository contains the server-side application responsible for managing a 
 * **Runtime & Framework:** Node.js, Express 5
 * **Language:** TypeScript
 * **Database & ORM:** PostgreSQL, Sequelize, sequelize-typescript
+* **Validation:** express-validator
 * **Utilities & Development Tools:** dotenv, colors, Nodemon, tsx
 * **Testing & Documentation:** Jest, Supertest, Swagger / OpenAPI *(planned)*
 
@@ -28,8 +29,8 @@ This repository contains the server-side application responsible for managing a 
 - [x] Modular routing and HTTP methods (GET, POST, PUT, PATCH, DELETE)
 - [x] PostgreSQL database connection with Sequelize and environment variables
 - [x] Product database model definition with TypeScript decorators
-- [ ] CRUD controllers and database operations
-- [ ] Request validation for incoming data
+- [x] Request validation middleware for incoming data
+- [ ] Complete CRUD controllers and database operations
 - [ ] Automated API testing and code coverage
 - [ ] Interactive API documentation with Swagger
 - [ ] CORS configuration and request logging for frontend integration
@@ -76,6 +77,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 * **Entorno y Framework:** Node.js, Express 5
 * **Lenguaje:** TypeScript
 * **Base de datos y ORM:** PostgreSQL, Sequelize, sequelize-typescript
+* **Validación:** express-validator
 * **Utilidades y Herramientas de desarrollo:** dotenv, colors, Nodemon, tsx
 * **Testing y Documentación:** Jest, Supertest, Swagger / OpenAPI *(planificado)*
 
@@ -85,8 +87,8 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 - [x] Enrutamiento modular y métodos HTTP (GET, POST, PUT, PATCH, DELETE)
 - [x] Conexión a base de datos PostgreSQL con Sequelize y variables de entorno
 - [x] Definición del modelo de productos en base de datos con decoradores de TypeScript
-- [ ] Controladores CRUD y operaciones en base de datos
-- [ ] Validación de datos de entrada en las peticiones
+- [x] Middleware de validación de datos de entrada en las peticiones
+- [ ] Controladores CRUD completos y operaciones en base de datos
 - [ ] Testing automatizado de endpoints y cobertura de código
 - [ ] Documentación interactiva de la API con Swagger
 - [ ] Configuración de CORS y registro de peticiones (logging) para conectar con el frontend
