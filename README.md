@@ -18,15 +18,16 @@ This repository contains the server-side application responsible for managing a 
 
 * **Runtime & Framework:** Node.js, Express 5
 * **Language:** TypeScript
-* **Development Tools:** Nodemon, tsx
-* **Database & ORM:** PostgreSQL, Sequelize *(planned)*
+* **Database & ORM:** PostgreSQL, Sequelize
+* **Utilities & Development Tools:** dotenv, colors, Nodemon, tsx
 * **Testing & Documentation:** Jest, Supertest, Swagger / OpenAPI *(planned)*
 
 ### Roadmap
 
 - [x] Initial server setup with Express, TypeScript, and Nodemon
-- [ ] Modular routing and HTTP methods (GET, POST, PUT, PATCH, DELETE)
-- [ ] PostgreSQL database connection and product model
+- [x] Modular routing and HTTP methods (GET, POST, PUT, PATCH, DELETE)
+- [x] PostgreSQL database connection with Sequelize and environment variables
+- [ ] Product model and CRUD operations
 - [ ] Request validation for incoming data
 - [ ] Automated API testing and code coverage
 - [ ] Interactive API documentation with Swagger
@@ -45,7 +46,13 @@ This repository contains the server-side application responsible for managing a 
    npm install
    ```
 
-3. Start the development server:
+3. Configure your environment variables using the template:
+   ```bash
+   cp .env.example .env
+   ```
+   Open `.env` and set your PostgreSQL connection string in `DATABASE_URL`.
+
+4. Start the development server:
    ```bash
    npm run dev
    ```
@@ -67,15 +74,16 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 
 * **Entorno y Framework:** Node.js, Express 5
 * **Lenguaje:** TypeScript
-* **Herramientas de desarrollo:** Nodemon, tsx
-* **Base de datos y ORM:** PostgreSQL, Sequelize *(planificado)*
+* **Base de datos y ORM:** PostgreSQL, Sequelize
+* **Utilidades y Herramientas de desarrollo:** dotenv, colors, Nodemon, tsx
 * **Testing y Documentación:** Jest, Supertest, Swagger / OpenAPI *(planificado)*
 
 ### Roadmap
 
 - [x] Configuración inicial del servidor con Express, TypeScript y Nodemon
-- [ ] Enrutamiento modular y métodos HTTP (GET, POST, PUT, PATCH, DELETE)
-- [ ] Conexión a base de datos PostgreSQL y modelo de productos
+- [x] Enrutamiento modular y métodos HTTP (GET, POST, PUT, PATCH, DELETE)
+- [x] Conexión a base de datos PostgreSQL con Sequelize y variables de entorno
+- [ ] Modelo de productos y operaciones CRUD
 - [ ] Validación de datos de entrada en las peticiones
 - [ ] Testing automatizado de endpoints y cobertura de código
 - [ ] Documentación interactiva de la API con Swagger
@@ -94,7 +102,13 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
    npm install
    ```
 
-3. Inicia el servidor de desarrollo:
+3. Configura tus variables de entorno a partir de la plantilla:
+   ```bash
+   cp .env.example .env
+   ```
+   Abre el archivo `.env` y añade tu cadena de conexión de PostgreSQL en `DATABASE_URL`.
+
+4. Inicia el servidor de desarrollo:
    ```bash
    npm run dev
    ```
