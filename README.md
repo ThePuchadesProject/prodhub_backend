@@ -30,7 +30,7 @@ This repository contains the server-side application responsible for managing a 
 - [x] PostgreSQL database connection with Sequelize and environment variables
 - [x] Product database model definition with TypeScript decorators
 - [x] Request validation middleware for incoming data
-- [ ] Complete CRUD controllers and database operations
+- [x] Complete CRUD controllers and database operations
 - [ ] Automated API testing and code coverage
 - [ ] Interactive API documentation with Swagger
 - [ ] CORS configuration and request logging for frontend integration
@@ -88,7 +88,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 - [x] Conexión a base de datos PostgreSQL con Sequelize y variables de entorno
 - [x] Definición del modelo de productos en base de datos con decoradores de TypeScript
 - [x] Middleware de validación de datos de entrada en las peticiones
-- [ ] Controladores CRUD completos y operaciones en base de datos
+- [x] Controladores CRUD completos y operaciones en base de datos
 - [ ] Testing automatizado de endpoints y cobertura de código
 - [ ] Documentación interactiva de la API con Swagger
 - [ ] Configuración de CORS y registro de peticiones (logging) para conectar con el frontend

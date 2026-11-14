@@ -55,3 +55,36 @@ export const updateProduct = async (req: Request, res: Response) => {
     console.log(error);
   }
 };
+
+export const updateAvailability = async (req: Request, res: Response) => {
+  try {
+    const id = Number(req.params.id);
+    const product = await Product.findByPk(id);
+    if (!product) {
+      return res.status(404).json({ error: "Product Not Found" });
+    }
+
+    // Actualizar
+    product.availability = !product.dataValues.availability;
+    await product.save();
+
+    res.json({ data: product });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const deleteProduct = async (req: Request, res: Response) => {
+  try {
+    const id = Number(req.params.id);
+    const product = await Product.findByPk(id);
+    if (!product) {
+      return res.status(404).json({ error: "Product Not Found" });
+    }
+
+    await product.destroy();
+    res.json({ data: "Product Deleted" });
+  } catch (error) {
+    console.log(error);
+  }
+};

@@ -2,8 +2,10 @@ import { Router } from "express";
 import { body, param } from "express-validator";
 import {
   createProduct,
+  deleteProduct,
   getProductById,
   getProducts,
+  updateAvailability,
   updateProduct,
 } from "./handlers/product.js";
 import { handleInputErrors } from "./middleware/index.js";
@@ -11,6 +13,7 @@ import { handleInputErrors } from "./middleware/index.js";
 const router = Router();
 // Routing
 router.get("/", getProducts);
+
 router.get(
   "/:id",
 
@@ -39,7 +42,9 @@ router.post(
 
 router.put(
   "/:id",
-  // Validacion
+
+  param("id").isInt().withMessage("Invalid ID"),
+
   body("name").notEmpty().withMessage("The product name cannot be left blank"),
 
   body("price")
@@ -59,12 +64,18 @@ router.put(
   updateProduct,
 );
 
-router.patch("/", (req, res) => {
-  res.json("Desde PATCH");
-});
+router.patch(
+  "/:id",
+  param("id").isInt().withMessage("Invalid ID"),
+  handleInputErrors,
+  updateAvailability,
+);
 
-router.delete("/", (req, res) => {
-  res.json("Desde DELETE");
-});
+router.delete(
+  "/:id",
+  param("id").isInt().withMessage("Invalid ID"),
+  handleInputErrors,
+  deleteProduct,
+);
 
 export default router;
