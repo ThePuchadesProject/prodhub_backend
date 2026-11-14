@@ -21,7 +21,8 @@ This repository contains the server-side application responsible for managing a 
 * **Database & ORM:** PostgreSQL, Sequelize, sequelize-typescript
 * **Validation:** express-validator
 * **Utilities & Development Tools:** dotenv, colors, Nodemon, tsx
-* **Testing & Documentation:** Jest, Supertest, Swagger / OpenAPI *(planned)*
+* **Testing:** Vitest, Supertest
+* **Documentation:** Swagger / OpenAPI *(planned)*
 
 ### Roadmap
 
@@ -79,7 +80,8 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 * **Base de datos y ORM:** PostgreSQL, Sequelize, sequelize-typescript
 * **Validación:** express-validator
 * **Utilidades y Herramientas de desarrollo:** dotenv, colors, Nodemon, tsx
-* **Testing y Documentación:** Jest, Supertest, Swagger / OpenAPI *(planificado)*
+* **Testing:** Vitest, Supertest
+* **Documentación:** Swagger / OpenAPI *(planificado)*
 
 ### Roadmap
 
