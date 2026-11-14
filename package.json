@@ -16,7 +16,8 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon --exec tsx src/index.ts",
-    "test": "vitest run"
+    "test": "vitest run",
+    "pretest": "tsx ./src/data --clear"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
