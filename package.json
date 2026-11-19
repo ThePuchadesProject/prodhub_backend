@@ -17,11 +17,13 @@
   "scripts": {
     "dev": "nodemon --exec tsx src/index.ts",
     "test": "vitest run",
+    "test:coverage": "npm run pretest && vitest run --coverage",
     "pretest": "tsx ./src/data --clear"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/supertest": "^7.2.1",
+    "@vitest/coverage-v8": "^5.1.0",
     "nodemon": "^3.1.14",
     "supertest": "^7.3.2",
     "tsx": "^4.23.15",

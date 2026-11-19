@@ -4,7 +4,7 @@ import router from "./router.js";
 import db from "./config/db.js";
 
 // Conectar a base de datos
-async function connectDB() {
+export async function connectDB() {
   try {
     await db.authenticate();
     db.sync();

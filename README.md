@@ -21,7 +21,7 @@ This repository contains the server-side application responsible for managing a 
 * **Database & ORM:** PostgreSQL, Sequelize, sequelize-typescript
 * **Validation:** express-validator
 * **Utilities & Development Tools:** dotenv, colors, Nodemon, tsx
-* **Testing:** Vitest, Supertest
+* **Testing:** Vitest, Supertest, V8 Coverage
 * **Documentation:** Swagger / OpenAPI *(planned)*
 
 ### Roadmap
@@ -32,7 +32,7 @@ This repository contains the server-side application responsible for managing a 
 - [x] Product database model definition with TypeScript decorators
 - [x] Request validation middleware for incoming data
 - [x] Complete CRUD controllers and database operations
-- [ ] Automated API testing and code coverage
+- [x] Automated API testing and code coverage
 - [ ] Interactive API documentation with Swagger
 - [ ] CORS configuration and request logging for frontend integration
 
@@ -61,6 +61,12 @@ This repository contains the server-side application responsible for managing a 
    ```
    The API will run locally at `http://localhost:4000`.
 
+5. Run tests and check code coverage:
+   ```bash
+   npm test
+   npm run test:coverage
+   ```
+
 ---
 
 <a name="español"></a>
@@ -80,7 +86,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 * **Base de datos y ORM:** PostgreSQL, Sequelize, sequelize-typescript
 * **Validación:** express-validator
 * **Utilidades y Herramientas de desarrollo:** dotenv, colors, Nodemon, tsx
-* **Testing:** Vitest, Supertest
+* **Testing:** Vitest, Supertest, V8 Coverage
 * **Documentación:** Swagger / OpenAPI *(planificado)*
 
 ### Roadmap
@@ -91,7 +97,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 - [x] Definición del modelo de productos en base de datos con decoradores de TypeScript
 - [x] Middleware de validación de datos de entrada en las peticiones
 - [x] Controladores CRUD completos y operaciones en base de datos
-- [ ] Testing automatizado de endpoints y cobertura de código
+- [x] Testing automatizado de endpoints y cobertura de código
 - [ ] Documentación interactiva de la API con Swagger
 - [ ] Configuración de CORS y registro de peticiones (logging) para conectar con el frontend
 
@@ -119,6 +125,12 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
    npm run dev
    ```
    La API estará disponible localmente en `http://localhost:4000`.
+
+5. Ejecuta los tests y revisa la cobertura de código:
+   ```bash
+   npm test
+   npm run test:coverage
+   ```
 
 ---
 
