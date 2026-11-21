@@ -33,7 +33,7 @@ This repository contains the server-side application responsible for managing a 
 - [x] Request validation middleware for incoming data
 - [x] Complete CRUD controllers and database operations
 - [x] Automated API testing and code coverage
-- [ ] Interactive API documentation with Swagger
+- [x] Interactive API documentation with Swagger
 - [ ] CORS configuration and request logging for frontend integration
 
 ### Local Installation
@@ -59,7 +59,7 @@ This repository contains the server-side application responsible for managing a 
    ```bash
    npm run dev
    ```
-   The API will run locally at `http://localhost:4000`.
+   The API will run locally at `http://localhost:4000`, and the interactive Swagger documentation will be available at `http://localhost:4000/docs`.
 
 5. Run tests and check code coverage:
    ```bash
@@ -98,7 +98,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 - [x] Middleware de validación de datos de entrada en las peticiones
 - [x] Controladores CRUD completos y operaciones en base de datos
 - [x] Testing automatizado de endpoints y cobertura de código
-- [ ] Documentación interactiva de la API con Swagger
+- [x] Documentación interactiva de la API con Swagger
 - [ ] Configuración de CORS y registro de peticiones (logging) para conectar con el frontend
 
 ### Instalación local
@@ -124,7 +124,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
    ```bash
    npm run dev
    ```
-   La API estará disponible localmente en `http://localhost:4000`.
+   La API estará disponible localmente en `http://localhost:4000` y la documentación interactiva de Swagger en `http://localhost:4000/docs`.
 
 5. Ejecuta los tests y revisa la cobertura de código:
    ```bash

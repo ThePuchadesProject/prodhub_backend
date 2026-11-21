@@ -1,4 +1,5 @@
 import swaggerJSDoc from "swagger-jsdoc";
+import { SwaggerUiOptions } from "swagger-ui-express";
 
 const options: swaggerJSDoc.Options = {
   swaggerDefinition: {
@@ -20,4 +21,29 @@ const options: swaggerJSDoc.Options = {
 
 const swaggerSpec = swaggerJSDoc(options);
 
+const swaggerUiOptions: SwaggerUiOptions = {
+  customCss: `
+    html.dark-mode .swagger-ui {
+      background: #18181b !important;
+    }
+    .swagger-ui .topbar {
+      background-color: #000000 !important;
+      padding: 10px 0 !important;
+    }
+    .swagger-ui .topbar .topbar-wrapper .link {
+      content: url('/prodhub.png');
+      flex: 0 0 auto !important;
+      width: 48px !important;
+      max-width: 48px !important;
+      height: 48px !important;
+      border-radius: 50%;
+    }
+    .swagger-ui .topbar .download-url-wrapper {
+      display: none !important;
+    }
+  `,
+  customfavIcon: "/prodhub.ico",
+  customSiteTitle: "ProdHub REST API Documentation",
+};
 export default swaggerSpec;
+export { swaggerUiOptions };
