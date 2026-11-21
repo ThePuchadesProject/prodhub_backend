@@ -22,7 +22,7 @@ This repository contains the server-side application responsible for managing a 
 * **Validation:** express-validator
 * **Utilities & Development Tools:** dotenv, colors, Nodemon, tsx
 * **Testing:** Vitest, Supertest, V8 Coverage
-* **Documentation:** Swagger / OpenAPI *(planned)*
+* **Documentation:** Swagger (swagger-jsdoc, swagger-ui-express), OpenAPI 3.0
 
 ### Roadmap
 
@@ -87,7 +87,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 * **Validación:** express-validator
 * **Utilidades y Herramientas de desarrollo:** dotenv, colors, Nodemon, tsx
 * **Testing:** Vitest, Supertest, V8 Coverage
-* **Documentación:** Swagger / OpenAPI *(planificado)*
+* **Documentación:** Swagger (swagger-jsdoc, swagger-ui-express), OpenAPI 3.0
 
 ### Roadmap
 
