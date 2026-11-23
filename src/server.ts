@@ -1,5 +1,7 @@
 import express from "express";
 import colors from "colors";
+import cors, { CorsOptions } from "cors";
+import morgan from "morgan";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import swaggerUi from "swagger-ui-express";
@@ -27,11 +29,25 @@ connectDB();
 // Instancia de Express
 const server = express();
 
+// Permitir conexiones
+const corsOptions: CorsOptions = {
+  origin: function (origin, callback) {
+    if (origin === process.env.FRONTEND_URL || process.env.API_URL) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS Error"));
+    }
+  },
+};
+server.use(cors(corsOptions));
+
 // Leer datos de formularios
 server.use(express.json());
 
 // Archivos estáticos (logo y favicon para Swagger)
 server.use(express.static(path.join(__dirname, "../public")));
+
+server.use(morgan("dev"));
 
 server.use("/api/products", router);
 

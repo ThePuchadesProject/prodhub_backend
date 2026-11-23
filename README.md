@@ -20,6 +20,7 @@ This repository contains the server-side application responsible for managing a 
 * **Language:** TypeScript
 * **Database & ORM:** PostgreSQL, Sequelize, sequelize-typescript
 * **Validation:** express-validator
+* **Middleware & Logging:** cors, morgan
 * **Utilities & Development Tools:** dotenv, colors, Nodemon, tsx
 * **Testing:** Vitest, Supertest, V8 Coverage
 * **Documentation:** Swagger (swagger-jsdoc, swagger-ui-express), OpenAPI 3.0
@@ -34,7 +35,7 @@ This repository contains the server-side application responsible for managing a 
 - [x] Complete CRUD controllers and database operations
 - [x] Automated API testing and code coverage
 - [x] Interactive API documentation with Swagger
-- [ ] CORS configuration and request logging for frontend integration
+- [x] CORS configuration and request logging for frontend integration
 
 ### Local Installation
 
@@ -85,6 +86,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 * **Lenguaje:** TypeScript
 * **Base de datos y ORM:** PostgreSQL, Sequelize, sequelize-typescript
 * **Validación:** express-validator
+* **Middleware y Logging:** cors, morgan
 * **Utilidades y Herramientas de desarrollo:** dotenv, colors, Nodemon, tsx
 * **Testing:** Vitest, Supertest, V8 Coverage
 * **Documentación:** Swagger (swagger-jsdoc, swagger-ui-express), OpenAPI 3.0
@@ -99,7 +101,7 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
 - [x] Controladores CRUD completos y operaciones en base de datos
 - [x] Testing automatizado de endpoints y cobertura de código
 - [x] Documentación interactiva de la API con Swagger
-- [ ] Configuración de CORS y registro de peticiones (logging) para conectar con el frontend
+- [x] Configuración de CORS y registro de peticiones (logging) para conectar con el frontend
 
 ### Instalación local
 
