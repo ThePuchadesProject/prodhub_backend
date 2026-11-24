@@ -68,6 +68,11 @@ This repository contains the server-side application responsible for managing a 
    npm run test:coverage
    ```
 
+6. Build the TypeScript project:
+   ```bash
+   npm run build
+   ```
+
 ---
 
 <a name="español"></a>
@@ -132,6 +137,11 @@ Este repositorio contiene la parte del servidor encargada de gestionar un catál
    ```bash
    npm test
    npm run test:coverage
+   ```
+
+6. Compila el proyecto TypeScript:
+   ```bash
+   npm run build
    ```
 
 ---
